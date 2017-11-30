@@ -31,9 +31,6 @@ resource "aws_nat_gateway" "Tejas_natgw" {
   allocation_id = "${aws_eip.Tejas_lb.id}"
   subnet_id     = "${aws_subnet.pubSubnet1.id}"
 
-  tags {
-    Name = "gw NAT"
-  }
 }
 resource "aws_eip" "Tejas_lb" {
   vpc      = true

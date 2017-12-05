@@ -1,11 +1,25 @@
 provider "aws" {
   region = "us-west-2"
  }
+resource "terraform_remote_state" "vpc" {
 
+  backend = "s3"
+
+  config {
+
+    bucket = "${var.remote_state_bucket}"
+
+    key = "${var.vpc_state_file_name}"
+
+    region = "${var.aws_region}"
+
+  }
+
+}
 resource "aws_instance" "Tejas_EC2" {
   ami           = "${var.AMI}"
   instance_type = "t2.micro"
-  subnet_id = "subnet-4051df08"
+  subnet_id = "${terraform_remote_state.vpc.output.Pubsubnet_id}"
   vpc_security_group_ids = "${var.SG_IDs}"
   key_name = "Tejas_keypair"
   availability_zone = "us-west-2b"

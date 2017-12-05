@@ -9,4 +9,5 @@ tar -xvzf apache-tomcat-7.0.82.tar.gz
 #to git clone webpage code and launch it
 cd apache-tomcat-7.0.82/webapps/
 git clone https://github.com/tejastaunad/webjsp_for_jenkins.git
+cd
 ./apache-tomcat-7.0.82/bin/startup.sh

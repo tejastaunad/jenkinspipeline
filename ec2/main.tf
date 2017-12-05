@@ -20,7 +20,7 @@ resource "aws_instance" "Tejas_EC2" {
   ami           = "${var.AMI}"
   instance_type = "t2.micro"
   subnet_id = "${terraform_remote_state.vpc.output.Pubsubnet_id}"
-  vpc_security_group_ids = "${var.SG_IDs}"
+  security_groups = "${var.SG_IDs}"
   key_name = "Tejas_keypair"
   availability_zone = "us-west-2b"
   associate_public_ip_address = "true"

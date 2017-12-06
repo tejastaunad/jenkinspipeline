@@ -19,7 +19,7 @@ resource "terraform_remote_state" "vpc" {
 resource "aws_instance" "Tejas_EC2" {
   ami           = "${var.AMI}"
   instance_type = "t2.micro"
-  subnet_id = "${terraform_remote_state.vpc.output.Pubsubnet_id}"
+  subnet_id = "${terraform_remote_state.ec2.output.Pubsubnet_id}"
   security_groups = "${var.SG_IDs}"
   key_name = "Tejas_keypair"
   availability_zone = "us-west-2b"

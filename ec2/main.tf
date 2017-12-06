@@ -9,7 +9,7 @@ resource "terraform_remote_state" "vpc" {
 
     bucket = "${var.remote_state_bucket}"
 
-    key = "${var.vpc_state_file_name}"
+    key = "${var.ec2_state_file_name}"
 
     region = "${var.aws_region}"
 

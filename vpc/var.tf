@@ -26,10 +26,3 @@ variable "cidr_block_to_internet"{
 variable "myip"{
 	default = "202.65.158.154/32"
 }
-variable "remote_state_bucket"{
-	default = "jenkinstejas"
-}
-variable "vpc_state_file_name"{
-	default = "ec2_state_file_name"
-}
-

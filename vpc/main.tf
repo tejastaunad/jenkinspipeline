@@ -1,7 +1,7 @@
 provider "aws" {
 
   region = "${var.aws_region}"
- }
+}
 resource "terraform_remote_state" "vpc" {
 
   backend = "s3"
@@ -30,7 +30,6 @@ resource "aws_vpc" "Tejas_vpc" {
 
   }
 }
-
 resource "aws_internet_gateway" "Tejas_igw" {
   vpc_id = "${aws_vpc.Tejas_vpc.id}"
 

@@ -187,6 +187,12 @@ resource "aws_security_group" "Tejas_SG" {
     protocol    = "-1"
     cidr_blocks = ["${var.myip}"]
   }
+    ingress {
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = ["${var.jenkinsip}"]
+  }
 
   egress {
     from_port       = 0

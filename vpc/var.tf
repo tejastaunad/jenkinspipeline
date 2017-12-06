@@ -1,7 +1,6 @@
 variable "aws_region" {
     default = "us-west-2"
 }
-
 variable "cidr_block_vpc"{
 	default = "10.0.0.0/16"
 }
@@ -33,6 +32,4 @@ variable "remote_state_bucket"{
 variable "vpc_state_file_name"{
 	default = "ec2_state_file_name"
 }
-variable "aws_region"{
-	default = "us-west-2"
-}
+

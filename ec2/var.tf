@@ -9,8 +9,8 @@ variable "remote_state_bucket"{
 	default = "jenkinstejas"
 }
 }
-variable "vpc_state_file_name"{
-	default = "vpc_state_file_name"
+variable "ec2_state_file_name"{
+	default = "ec2_state_file_name"
 }
 }
 variable "aws_region"{

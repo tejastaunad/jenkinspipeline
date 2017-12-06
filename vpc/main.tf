@@ -2,6 +2,21 @@ provider "aws" {
 
   region = "${var.aws_region}"
  }
+resource "terraform_remote_state" "vpc" {
+
+  backend = "s3"
+
+  config {
+
+    bucket = "${var.remote_state_bucket}"
+
+    key = "${var.vpc_state_file_name}"
+
+    region = "${var.aws_region}"
+
+  }
+
+}
 
 resource "aws_vpc" "Tejas_vpc" {
   cidr_block       = "${var.cidr_block_vpc}"

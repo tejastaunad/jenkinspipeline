@@ -8,10 +8,8 @@ variable "SG_IDs"{
 variable "remote_state_bucket"{
 	default = "jenkinstejas"
 }
-}
 variable "ec2_state_file_name"{
 	default = "ec2_state_file_name"
-}
 }
 variable "aws_region"{
 	default = "us-west-2"

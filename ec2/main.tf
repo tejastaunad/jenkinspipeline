@@ -22,7 +22,7 @@ resource "aws_instance" "Tejas_EC2" {
   subnet_id = "${terraform_remote_state.vpc.Pubsubnet_id}"
   security_groups = "${var.SG_IDs}"
   key_name = "Tejas_keypair"
-  availability_zone = "us-west-2b"
+  availability_zone = "us-west-2a"
   associate_public_ip_address = "true"
   user_data = "${file("script.sh")}"
   tags {

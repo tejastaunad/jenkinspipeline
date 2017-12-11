@@ -9,7 +9,5 @@ sudo tar -xvzf apache-tomcat-7.0.82.tar.gz
 #to git clone webpage code and launch it
 cd /home/ec2-user/apache-tomcat-7.0.82/webapps
 sudo git clone https://github.com/tejastaunad/Jenkinswebpage.git
-sudo chmod 777 /home/ec2-user/apache-tomcat-7.0.82/
-sudo chmod 777 /home/ec2-user/apache-tomcat-7.0.82/webapps/
 cd ../..
 sudo ./apache-tomcat-7.0.82/bin/startup.sh

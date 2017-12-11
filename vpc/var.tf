@@ -19,7 +19,6 @@ variable "cidr_block_SNpriv3"{
 variable "cidr_block_SNpriv4"{
 	default = "10.0.5.0/24"
 }
-
 variable "cidr_block_to_internet"{
 	default = "0.0.0.0/0"
 }

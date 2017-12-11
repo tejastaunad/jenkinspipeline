@@ -25,6 +25,6 @@ resource "aws_instance" "Tejas_EC2" {
     Owner = "Tejas"
     Project = "learning"
     Environment = "Testing"
-    Expi_date = "2017-11-10"
+    Expi_date = "2017-12-20"
   }
 }

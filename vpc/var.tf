@@ -26,5 +26,5 @@ variable "myip"{
 	default = "202.65.158.154/32"
 }
 variable "jenkinsip"{
-	default = "52.88.209.247/32"
+	default = "35.166.148.141/32"
 }

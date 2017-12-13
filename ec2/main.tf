@@ -17,7 +17,6 @@ resource "aws_instance" "Tejas_EC2" {
   subnet_id = "${data.terraform_remote_state.vpc.Pubsubnet_id}"
   security_groups = ["${data.terraform_remote_state.vpc.SecurityGroup_id}"]
   key_name = "Tejas_O"
-  availability_zone = "us-west-2a"
   associate_public_ip_address = "true"
   user_data = "${file("script.sh")}"
   tags {
